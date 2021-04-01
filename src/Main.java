@@ -55,10 +55,21 @@ while(oyunBittiMi() == false) {
         }else {
         	kartlar[i1][j1].setTahmin(false);
         }
-        
-
-
+       
     }
+    
+    public static boolean oyunBittiMi() {
+    	for( int i =0 ; i < 4 ; i++) {
+    		for(int j= 0 ; j< 4 ; j++) {
+    			if(kartlar[i][j].isTahmin() == false) {
+    				return false;
+    			}
+    		}
+    	}
+    	
+    	return true;
+    }
+
 
     public static void oyunTahtasi() {
 
