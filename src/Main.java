@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
 
     private static Kartlar[][] kartlar = new Kartlar[4] [4] ;
