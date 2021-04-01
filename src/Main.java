@@ -24,8 +24,37 @@ public class Main {
         kartlar[3][3]= new Kartlar['C'];
 
      */
+        
+while(oyunBittiMi() == false) {
+    		
+    		oyunTahtasi();
+    		tahminEt();
+    	}
 
+
+    }
+    public static void tahminEt() {
+    	Scanner scanner= new Scanner(System.in);
+    	
+    	System.out.println("Birinci tahmin (i ve j değerlerini bir boşluklu giriniz.");
+        int i1=scanner.nextInt();
+        int j1=scanner.nextInt();
+        
+        kartlar[i1][j1].setTahmin(true);
         oyunTahtasi();
+        
+        
+        System.out.println("Birinci tahmin (i ve j değerlerini bir boşluklu giriniz.");
+        int i2=scanner.nextInt();
+        int j2=scanner.nextInt();
+        
+        if(kartlar[i1][j1].getDeger()== kartlar[i2][j2].getDeger()) {
+        	kartlar[i2][j2].setTahmin(true);
+        	
+        }else {
+        	kartlar[i1][j1].setTahmin(false);
+        }
+        
 
 
     }
@@ -52,10 +81,6 @@ public class Main {
 
 
         System.out.println("-------------------");
-
-
-
-
 
 
 
